@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oscillogram</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: #000;
+        }
+        canvas {
+            display: block;
+            background: #000;
+            margin-top: 20px;
+        }
+        .controls {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: white;
+        }
+        input {
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="controls">
+        <label for="maxCircles">Max Circles: <span id="circleCount">7</span></label>
+        <input type="range" id="maxCircles" min="1" max="36" value="7">
+        
+        <label for="speed">Speed: <span id="speedValue">0.1</span></label>
+        <input type="range" id="speed" min="0.01" max="1" step="0.01" value="0.1">
+    </div>
+    <canvas id="oscillogramCanvas"></canvas>
+    <script src="codex.js">
+    </script>
+</body>
+</html>
